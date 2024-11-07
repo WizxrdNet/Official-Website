@@ -3,107 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wizxrd Net </title>
+    <title>Free Fire Mod Menu</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #000;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #fff;
-            color: #000;
-            padding: 20px 0;
-            text-align: center;
-            border-bottom: 1px solid #ccc;
-        }
-        header h1 {
-            font-size: 3em; /* Adjust the size as needed */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #f8f8f8;
-        }
-        nav a {
-            color: #000;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-        }
-        .container {
-            padding: 20px;
-            background-color: #fff;
-        }
-        .download-link, .whatsapp-link {
-            display: block;
-            margin: 20px 0;
-            padding: 10px;
-            background-color: #f0f0f0;
-            color: #000;
-            text-align: center;
-            text-decoration: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .download-link:hover, .whatsapp-link:hover {
-            background-color: #e0e0e0;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
-        .social-link {
-            display: inline-block;
-            margin: 0 10px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            color: #000;
-            text-align: center;
-            text-decoration: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .social-link:hover {
-            background-color: #e0e0e0;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
+        body { font-family: Arial, sans-serif; }
+        .menu { text-align: center; padding: 20px; }
+        .menu-item { margin: 10px 0; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Wizxrd Net </h1>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#downloads">Downloads</a>
-        <a href="#updates">Updates</a>
-        <a href="#whatsapp">WhatsApp</a>
-    </nav>
-    <div class="container" id="home">
-        <h2>Welcome to @Wizxrd.Net.Official</h2>
-        <p>Tu único destino para obtener las mejores actualizaciones y modificaciones de forma gratuita para Free Fire.</p>
-        <a href="https://www.instagram.com/wizxrd.net.official?igsh=Z2lwMW51eWo1M3h0&utm_source=qr" class="social-link">Instagram</a>
-        <a href="https://www.tiktok.com/@wizxrd.net.official?_t=8oc81caKxji&_r=1" class="social-link">TikTok</a>
+    <div class="menu">
+        <h1>RG SENS1 ™ Mod Menu</h1>
+        <div class="menu-item">
+            <label>Accuracy:</label>
+            <input type="range" min="0" max="100" value="100" id="accuracy">
+        </div>
+        <div class="menu-item">
+            <label>Smoothness:</label>
+            <input type="range" min="0" max="5" value="1" step="0.1" id="smoothness">
+        </div>
+        <div class="menu-item">
+            <label>Target Priority:</label>
+            <select id="targetPriority">
+                <option value="head">Head</option>
+                <option value="body">Body</option>
+                <option value="limbs">Limbs</option>
+            </select>
+        </div>
+        <button onclick="applySettings()">Apply Settings</button>
     </div>
-    <div class="container" id="downloads">
-        <h2>Downloads</h2>
-        <a href="https://www.mediafire.com/file/vtiduhvmxqtz7xj/%25F0%259D%2599%2592%25F0%259D%2599%259E%25F0%259D%2599%25AF%25F0%259D%2599%25AD%25F0%259D%2599%25A7%25F0%259D%2599%2599_%25F0%259D%2599%2589%25F0%259D%2599%259A%25F0%259D%2599%25A9_%25EF%25A3%25BF.scriptable/file" class="download-link">Download File</a>
-        <a href="https://www.icloud.com/shortcuts/f81fb821ae744ed588c8ab43c719f649" class="download-link">Download Shortcut</a>
-    </div>
-    <div class="container" id="updates">
-        <h2>Updates</h2>
-        <p>Panel para la nueva actualizazion de Free Fire 1.105.13</p>
-    </div>
-    <div class="container" id="whatsapp">
-        <h2>WhatsApp</h2>
-        <p>Únete al grupo official de Wizxrd Net  en WhatsApp</p>
-        <a href="https://chat.whatsapp.com/KfhxRXwYcmeGGpeHF17WJZ" class="whatsapp-link">WhatsApp Link</a>
-    </div>
+    <script>
+        function applySettings() {
+            const accuracy = document.getElementById('accuracy').value;
+            const smoothness = document.getElementById('smoothness').value;
+            const targetPriority = document.getElementById('targetPriority').value;
+
+            // Inject these settings back into the game (pseudo-code)
+            alert(`Settings applied: Accuracy ${accuracy}, Smoothness ${smoothness}, Target Priority ${targetPriority}`);
+        }
+    </script>
 </body>
 </html>

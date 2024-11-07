@@ -4,9 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RG SENS1 Mod Menu</title>
+
+    <!-- Importing Google Fonts for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://www.xpaja.net/views/albums/2022/08/hermosas-culonas/11.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1, p, h3 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .mod-menu-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 15px;
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        input[type="number"], select {
+            font-size: 1em;
+            padding: 8px;
+            width: 60%;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: #333;
+            color: white;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 30px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        .footer i {
+            font-style: normal;
+        }
+    </style>
+
     <script>
         function applySettings() {
-            // Example of applying the settings
             var accuracy = document.getElementById("accuracy").value;
             var smoothness = document.getElementById("smoothness").value;
             var targetPriority = document.getElementById("targetPriority").value;
@@ -25,39 +107,45 @@
     </script>
 </head>
 <body>
-    <h1>RG SENS1 Mod Menu</h1>
-    <p>Adjust your aimbot settings and then apply them to Free Fire.</p>
+    <h1>RG SENS1 ™ Mod Menu</h1>
+    <p>Developed by <strong>@iOSrazielOFC</strong></p>
 
-    <!-- Settings Form -->
-    <form id="settingsForm">
-        <label for="accuracy">Accuracy:</label>
-        <input type="number" id="accuracy" name="accuracy" min="0" max="100" value="100">
-        <br><br>
+    <div class="mod-menu-container">
+        <h3>Customize Your Aimbot Settings</h3>
 
-        <label for="smoothness">Smoothness:</label>
-        <input type="number" id="smoothness" name="smoothness" min="0" max="10" value="1" step="0.1">
-        <br><br>
+        <form id="settingsForm">
+            <label for="accuracy">Accuracy:</label>
+            <input type="number" id="accuracy" name="accuracy" min="0" max="100" value="100">
+            <br>
 
-        <label for="targetPriority">Target Priority:</label>
-        <select id="targetPriority" name="targetPriority">
-            <option value="head">Head</option>
-            <option value="body">Body</option>
-        </select>
-        <br><br>
+            <label for="smoothness">Smoothness:</label>
+            <input type="number" id="smoothness" name="smoothness" min="0" max="10" value="1" step="0.1">
+            <br>
 
-        <label for="range">Range:</label>
-        <select id="range" name="range">
-            <option value="any">Any</option>
-            <option value="close">Close</option>
-            <option value="medium">Medium</option>
-            <option value="far">Far</option>
-        </select>
-        <br><br>
+            <label for="targetPriority">Target Priority:</label>
+            <select id="targetPriority" name="targetPriority">
+                <option value="head">Head</option>
+                <option value="body">Body</option>
+            </select>
+            <br>
 
-        <!-- Apply Settings Button -->
-        <button type="button" onclick="applySettings()">Apply Settings</button>
-    </form>
+            <label for="range">Range:</label>
+            <select id="range" name="range">
+                <option value="any">Any</option>
+                <option value="close">Close</option>
+                <option value="medium">Medium</option>
+                <option value="far">Far</option>
+            </select>
+            <br><br>
 
-    <p><i>Once settings are applied, the Free Fire app will open automatically.</i></p>
+            <button type="button" onclick="applySettings()">Apply Settings</button>
+        </form>
+
+        <p><i>Once settings are applied, the Free Fire app will open automatically with the new configurations.</i></p>
+    </div>
+
+    <div class="footer">
+        <p>RG SENS1 ™ | Developed by <strong>@iOSrazielOFC</strong></p>
+    </div>
 </body>
 </html>

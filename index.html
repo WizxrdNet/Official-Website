@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RG SENS1 Mod Menu</title>
+    <title>RG SENS1 ™</title>
 
     <!-- Importing Google Fonts for a modern look -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
@@ -21,71 +20,100 @@
             text-align: center;
         }
 
-        h1, p, h3 {
+        h1 {
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
+            font-size: 3em;
+            color: blue;
+            text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff, 0 0 45px blue, 0 0 60px blue;
+            letter-spacing: 5px;
+            margin-top: 20px;
         }
 
-        h1 {
-            margin-top: 20px;
-            font-size: 2.5em;
+        h2 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 2em;
+            color: black;
+            text-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff;
+            letter-spacing: 3px;
+            margin-top: 10px;
+        }
+
+        h2 span {
+            color: white;
         }
 
         p {
             font-size: 1.2em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .mod-menu-container {
             background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
+            padding: 30px;
             border-radius: 15px;
             width: 80%;
+            max-width: 600px;
             margin: 50px auto;
             text-align: center;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
         }
 
         label {
             font-size: 1.1em;
-            margin-bottom: 5px;
-            display: inline-block;
+            margin-bottom: 10px;
+            display: block;
+            color: #FFD700;
         }
 
         input[type="number"], select {
-            font-size: 1em;
-            padding: 8px;
-            width: 60%;
+            font-size: 1.2em;
+            padding: 10px;
+            width: 70%;
             margin-bottom: 15px;
             border-radius: 10px;
-            border: none;
+            border: 2px solid #FFD700;
+            background-color: #333;
+            color: white;
+        }
+
+        select {
+            font-size: 1.2em;
+            padding: 10px;
+            width: 75%;
+            border-radius: 10px;
+            border: 2px solid #FFD700;
             background-color: #333;
             color: white;
         }
 
         button {
-            font-size: 1.2em;
-            padding: 10px 30px;
-            background-color: #1a73e8;
+            font-size: 1.5em;
+            padding: 12px 40px;
+            background-color: #28a745;
             color: white;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
         button:hover {
-            background-color: #005bb5;
+            background-color: #218838;
+            transform: scale(1.05);
         }
 
         .footer {
-            margin-top: 40px;
-            font-size: 0.9em;
+            margin-top: 50px;
+            font-size: 1em;
             color: #ccc;
         }
 
-        .footer i {
-            font-style: normal;
+        .footer strong {
+            color: #FFD700;
         }
+
     </style>
 
     <script>
@@ -95,34 +123,41 @@
             var targetPriority = document.getElementById("targetPriority").value;
             var range = document.getElementById("range").value;
 
-            // You can add your logic to apply these settings in the mod menu.
-            // For this example, we just show an alert with the chosen settings.
+            // Displaying settings in an alert for confirmation
             alert("Settings Applied:\nAccuracy: " + accuracy + "\nSmoothness: " + smoothness +
                   "\nTarget Priority: " + targetPriority + "\nRange: " + range);
 
-            // Redirect to Free Fire app with the settings applied (using freefire://)
+            // Delay to allow user to see the confirmation, then open Free Fire with applied settings
             setTimeout(function() {
+                // Logic for interacting with Free Fire app goes here
                 window.location.href = "freefire://";
-            }, 500); // Delay for user to see the alert before redirecting
+            }, 500); // Short delay before opening Free Fire
         }
     </script>
+
 </head>
 <body>
-    <h1>RG SENS1 ™ Mod Menu</h1>
+
+    <!-- Main Title -->
+    <h1>RG SENS1 ™</h1>
+    <h2>RG<span style="color: white;">X</span>treme Mods ™</h2>
     <p>Developed by <strong>@iOSrazielOFC</strong></p>
 
     <div class="mod-menu-container">
         <h3>Customize Your Aimbot Settings</h3>
 
         <form id="settingsForm">
-            <label for="accuracy">Accuracy:</label>
+            <!-- Accuracy setting -->
+            <label for="accuracy">Accuracy (%):</label>
             <input type="number" id="accuracy" name="accuracy" min="0" max="100" value="100">
             <br>
 
-            <label for="smoothness">Smoothness:</label>
+            <!-- Smoothness setting -->
+            <label for="smoothness">Smoothness (0-10):</label>
             <input type="number" id="smoothness" name="smoothness" min="0" max="10" value="1" step="0.1">
             <br>
 
+            <!-- Target priority selection -->
             <label for="targetPriority">Target Priority:</label>
             <select id="targetPriority" name="targetPriority">
                 <option value="head">Head</option>
@@ -130,6 +165,7 @@
             </select>
             <br>
 
+            <!-- Range selection -->
             <label for="range">Range:</label>
             <select id="range" name="range">
                 <option value="any">Any</option>
@@ -148,5 +184,6 @@
     <div class="footer">
         <p>RG SENS1 ™ | Developed by <strong>@iOSrazielOFC</strong></p>
     </div>
+
 </body>
 </html>
